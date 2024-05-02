@@ -16,11 +16,11 @@ sqr2=1
 sqr3=1
 for i in range(0,n):
     if (is_prime(i+1)):
-        arr[i]=sqr2
+        arr.append(sqr2)
         sqr2*=2
     elif(isperfect(i+1)):
-        arr[i]=sqr3
+        arr.append(sqr3)
         sqr3*=3
     else:
-        arr[i]=arr[i-1]=arr[i-2] 
-print (arr[n-1])       
+        arr.append(arr[i-1]+arr[i-2]) 
+print (arr[n-1])  
